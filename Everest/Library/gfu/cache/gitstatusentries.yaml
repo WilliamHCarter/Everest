@@ -13,27 +13,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 6
-  lastUpdatedAtString: 2020-04-24T23:20:13.855-04:00
+  lastUpdatedAtString: 2020-04-24T23:50:44.034-04:00
   initializedAtString: 2020-04-24T23:11:40.197-04:00
   entries:
-  - path: Everest/.vs/Everest/xs/project-cache/Assembly-CSharp-Editor-firstpass-Debug.json
-    fullPath: /Users/lsmol/Documents/Everset/Everest/.vs/Everest/xs/project-cache/Assembly-CSharp-Editor-firstpass-Debug.json
-    projectPath: .vs/Everest/xs/project-cache/Assembly-CSharp-Editor-firstpass-Debug.json
+  - path: .DS_Store
+    fullPath: /Users/lsmol/Documents/Everset/.DS_Store
+    projectPath: ../.DS_Store
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Everest/.vs/Everest/xs/project-cache/Unity.2D.PixelPerfect.Samples.Editor-Debug.json
-    fullPath: /Users/lsmol/Documents/Everset/Everest/.vs/Everest/xs/project-cache/Unity.2D.PixelPerfect.Samples.Editor-Debug.json
-    projectPath: .vs/Everest/xs/project-cache/Unity.2D.PixelPerfect.Samples.Editor-Debug.json
+  - path: Everest/.DS_Store
+    fullPath: /Users/lsmol/Documents/Everset/Everest/.DS_Store
+    projectPath: .DS_Store
     originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Everest/.vs/Everest/xs/project-cache/Unity.2D.PixelPerfect.Samples-Debug.json
-    fullPath: /Users/lsmol/Documents/Everset/Everest/.vs/Everest/xs/project-cache/Unity.2D.PixelPerfect.Samples-Debug.json
-    projectPath: .vs/Everest/xs/project-cache/Unity.2D.PixelPerfect.Samples-Debug.json
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
+    indexStatus: 1
+    workTreeStatus: 1
   - path: Everest/.vs/Everest/xs/sqlite3/storage.ide
     fullPath: /Users/lsmol/Documents/Everset/Everest/.vs/Everest/xs/sqlite3/storage.ide
     projectPath: .vs/Everest/xs/sqlite3/storage.ide
@@ -58,45 +52,105 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
+  - path: Everest/Assembly-CSharp.csproj
+    fullPath: /Users/lsmol/Documents/Everset/Everest/Assembly-CSharp.csproj
+    projectPath: Assembly-CSharp.csproj
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Everest/Assets/.DS_Store
+    fullPath: /Users/lsmol/Documents/Everset/Everest/Assets/.DS_Store
+    projectPath: Assets/.DS_Store
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Everest/Assets/Plugins/.DS_Store
+    fullPath: /Users/lsmol/Documents/Everset/Everest/Assets/Plugins/.DS_Store
+    projectPath: Assets/Plugins/.DS_Store
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Everest/Assets/Plugins/GitHub/.DS_Store
+    fullPath: /Users/lsmol/Documents/Everset/Everest/Assets/Plugins/GitHub/.DS_Store
+    projectPath: Assets/Plugins/GitHub/.DS_Store
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
   - path: Everest/Assets/Scripts/PlayerController.cs
     fullPath: /Users/lsmol/Documents/Everset/Everest/Assets/Scripts/PlayerController.cs
     projectPath: Assets/Scripts/PlayerController.cs
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Everest/Library/ArtifactDB
-    fullPath: /Users/lsmol/Documents/Everset/Everest/Library/ArtifactDB
-    projectPath: Library/ArtifactDB
+  - path: Everest/Everest.sln
+    fullPath: /Users/lsmol/Documents/Everset/Everest/Everest.sln
+    projectPath: Everest.sln
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Everest/Library/Artifacts/17/176dbef85a7588c20c575cea8f448170
-    fullPath: /Users/lsmol/Documents/Everset/Everest/Library/Artifacts/17/176dbef85a7588c20c575cea8f448170
-    projectPath: Library/Artifacts/17/176dbef85a7588c20c575cea8f448170
+  - path: Everest/Library/Artifacts/0f/0fbd9281b0fb355ba62c5d9a95a09f99
+    fullPath: /Users/lsmol/Documents/Everset/Everest/Library/Artifacts/0f/0fbd9281b0fb355ba62c5d9a95a09f99
+    projectPath: Library/Artifacts/0f/0fbd9281b0fb355ba62c5d9a95a09f99
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Everest/Library/Collab/Cache/Window.yml
-    fullPath: /Users/lsmol/Documents/Everset/Everest/Library/Collab/Cache/Window.yml
-    projectPath: Library/Collab/Cache/Window.yml
+  - path: Everest/Library/Artifacts/2e/2e05f714b44d929df65c4cb69e07bc6e
+    fullPath: /Users/lsmol/Documents/Everset/Everest/Library/Artifacts/2e/2e05f714b44d929df65c4cb69e07bc6e
+    projectPath: Library/Artifacts/2e/2e05f714b44d929df65c4cb69e07bc6e
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Everest/Library/gfu/cache/branches.yaml
-    fullPath: /Users/lsmol/Documents/Everset/Everest/Library/gfu/cache/branches.yaml
-    projectPath: Library/gfu/cache/branches.yaml
+  - path: Everest/Library/Artifacts/2e/2e94c34ce0106a8318a3df09bee0a1e4
+    fullPath: /Users/lsmol/Documents/Everset/Everest/Library/Artifacts/2e/2e94c34ce0106a8318a3df09bee0a1e4
+    projectPath: Library/Artifacts/2e/2e94c34ce0106a8318a3df09bee0a1e4
     originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Everest/Library/Artifacts/39/3968f5effbe9905356c3c24b0c4bcbb3
+    fullPath: /Users/lsmol/Documents/Everset/Everest/Library/Artifacts/39/3968f5effbe9905356c3c24b0c4bcbb3
+    projectPath: Library/Artifacts/39/3968f5effbe9905356c3c24b0c4bcbb3
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Everest/Library/Artifacts/60/60d05f77ac81435ba4615286920154ea
+    fullPath: /Users/lsmol/Documents/Everset/Everest/Library/Artifacts/60/60d05f77ac81435ba4615286920154ea
+    projectPath: Library/Artifacts/60/60d05f77ac81435ba4615286920154ea
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Everest/Library/Artifacts/63/6342631195b5d175988f0999dd151811
+    fullPath: /Users/lsmol/Documents/Everset/Everest/Library/Artifacts/63/6342631195b5d175988f0999dd151811
+    projectPath: Library/Artifacts/63/6342631195b5d175988f0999dd151811
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Everest/Library/Artifacts/73/73eea8acbfa1d833b1848364d63e38bb
+    fullPath: /Users/lsmol/Documents/Everset/Everest/Library/Artifacts/73/73eea8acbfa1d833b1848364d63e38bb
+    projectPath: Library/Artifacts/73/73eea8acbfa1d833b1848364d63e38bb
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Everest/Library/Artifacts/92/92cadc9af2ca3a75d6f259a694469a79
+    fullPath: /Users/lsmol/Documents/Everset/Everest/Library/Artifacts/92/92cadc9af2ca3a75d6f259a694469a79
+    projectPath: Library/Artifacts/92/92cadc9af2ca3a75d6f259a694469a79
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Everest/Library/Artifacts/9a/9a1ef171a34b1574bc730758d7ea86e8
+    fullPath: /Users/lsmol/Documents/Everset/Everest/Library/Artifacts/9a/9a1ef171a34b1574bc730758d7ea86e8
+    projectPath: Library/Artifacts/9a/9a1ef171a34b1574bc730758d7ea86e8
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Everest/Library/Artifacts/9c/9ca4aae5d0d2ef7d8bb8103be234e61e
+    fullPath: /Users/lsmol/Documents/Everset/Everest/Library/Artifacts/9c/9ca4aae5d0d2ef7d8bb8103be234e61e
+    projectPath: Library/Artifacts/9c/9ca4aae5d0d2ef7d8bb8103be234e61e
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
   - path: Everest/Library/gfu/cache/gitlocks.yaml
     fullPath: /Users/lsmol/Documents/Everset/Everest/Library/gfu/cache/gitlocks.yaml
     projectPath: Library/gfu/cache/gitlocks.yaml
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Everest/Library/gfu/cache/gitlog.yaml
-    fullPath: /Users/lsmol/Documents/Everset/Everest/Library/gfu/cache/gitlog.yaml
-    projectPath: Library/gfu/cache/gitlog.yaml
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
@@ -106,51 +160,99 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Everest/Library/gfu/cache/gittrackingstatus.yaml
-    fullPath: /Users/lsmol/Documents/Everset/Everest/Library/gfu/cache/gittrackingstatus.yaml
-    projectPath: Library/gfu/cache/gittrackingstatus.yaml
+  - path: Everest/Library/SceneVisibilityState.asset
+    fullPath: /Users/lsmol/Documents/Everset/Everest/Library/SceneVisibilityState.asset
+    projectPath: Library/SceneVisibilityState.asset
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Everest/Library/gfu/cache/repoinfo.yaml
-    fullPath: /Users/lsmol/Documents/Everset/Everest/Library/gfu/cache/repoinfo.yaml
-    projectPath: Library/gfu/cache/repoinfo.yaml
+  - path: Everest/Library/ScriptAssemblies/Assembly-CSharp.dll
+    fullPath: /Users/lsmol/Documents/Everset/Everest/Library/ScriptAssemblies/Assembly-CSharp.dll
+    projectPath: Library/ScriptAssemblies/Assembly-CSharp.dll
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Everest/Library/ScriptAssemblies/BuiltinAssemblies.stamp
-    fullPath: /Users/lsmol/Documents/Everset/Everest/Library/ScriptAssemblies/BuiltinAssemblies.stamp
-    projectPath: Library/ScriptAssemblies/BuiltinAssemblies.stamp
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: Everest/Library/SourceAssetDB
-    fullPath: /Users/lsmol/Documents/Everset/Everest/Library/SourceAssetDB
-    projectPath: Library/SourceAssetDB
+  - path: Everest/Library/ScriptAssemblies/Assembly-CSharp.pdb
+    fullPath: /Users/lsmol/Documents/Everset/Everest/Library/ScriptAssemblies/Assembly-CSharp.pdb
+    projectPath: Library/ScriptAssemblies/Assembly-CSharp.pdb
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Everest/obj/Debug/Assembly-CSharp-Editor-firstpass.csprojAssemblyReference.cache
-    fullPath: /Users/lsmol/Documents/Everset/Everest/obj/Debug/Assembly-CSharp-Editor-firstpass.csprojAssemblyReference.cache
-    projectPath: obj/Debug/Assembly-CSharp-Editor-firstpass.csprojAssemblyReference.cache
+  - path: Everest/Library/SpriteAtlasDatabase.asset
+    fullPath: /Users/lsmol/Documents/Everset/Everest/Library/SpriteAtlasDatabase.asset
+    projectPath: Library/SpriteAtlasDatabase.asset
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Everest/Library/StateCache/MainStageHierarchy/e6/e68177094e092c19818b8ae0f98f5728.json
+    fullPath: /Users/lsmol/Documents/Everset/Everest/Library/StateCache/MainStageHierarchy/e6/e68177094e092c19818b8ae0f98f5728.json
+    projectPath: Library/StateCache/MainStageHierarchy/e6/e68177094e092c19818b8ae0f98f5728.json
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Everest/Library/StateCache/SceneView/e3/e3c25a039b9c09ec22c8291bc2a5323e.json
+    fullPath: /Users/lsmol/Documents/Everset/Everest/Library/StateCache/SceneView/e3/e3c25a039b9c09ec22c8291bc2a5323e.json
+    projectPath: Library/StateCache/SceneView/e3/e3c25a039b9c09ec22c8291bc2a5323e.json
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Everest/Temp/__Backupscenes/0.backup
+    fullPath: /Users/lsmol/Documents/Everset/Everest/Temp/__Backupscenes/0.backup
+    projectPath: Temp/__Backupscenes/0.backup
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Everest/obj/Debug/Unity.2D.PixelPerfect.Samples.csprojAssemblyReference.cache
-    fullPath: /Users/lsmol/Documents/Everset/Everest/obj/Debug/Unity.2D.PixelPerfect.Samples.csprojAssemblyReference.cache
-    projectPath: obj/Debug/Unity.2D.PixelPerfect.Samples.csprojAssemblyReference.cache
+  - path: Everest/Temp/UnityTempFile-0ac3206efc8a94def85c663a0f6179f4
+    fullPath: /Users/lsmol/Documents/Everset/Everest/Temp/UnityTempFile-0ac3206efc8a94def85c663a0f6179f4
+    projectPath: Temp/UnityTempFile-0ac3206efc8a94def85c663a0f6179f4
     originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Everest/obj/Debug/Unity.2D.PixelPerfect.Samples.Editor.csprojAssemblyReference.cache
-    fullPath: /Users/lsmol/Documents/Everset/Everest/obj/Debug/Unity.2D.PixelPerfect.Samples.Editor.csprojAssemblyReference.cache
-    projectPath: obj/Debug/Unity.2D.PixelPerfect.Samples.Editor.csprojAssemblyReference.cache
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Everest/Temp/UnityTempFile-0db20de8a7c7f46d2beb3562593dbea2
+    fullPath: /Users/lsmol/Documents/Everset/Everest/Temp/UnityTempFile-0db20de8a7c7f46d2beb3562593dbea2
+    projectPath: Temp/UnityTempFile-0db20de8a7c7f46d2beb3562593dbea2
     originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Everest/Temp/UnityTempFile-3ed7bca4bdf494ecb90d80fc792a28ae
-    fullPath: /Users/lsmol/Documents/Everset/Everest/Temp/UnityTempFile-3ed7bca4bdf494ecb90d80fc792a28ae
-    projectPath: Temp/UnityTempFile-3ed7bca4bdf494ecb90d80fc792a28ae
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Everest/Temp/UnityTempFile-2179ef2ec98c84214874e641b8ab7b72
+    fullPath: /Users/lsmol/Documents/Everset/Everest/Temp/UnityTempFile-2179ef2ec98c84214874e641b8ab7b72
+    projectPath: Temp/UnityTempFile-2179ef2ec98c84214874e641b8ab7b72
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Everest/Temp/UnityTempFile-23a228c2c635c42d2a1d39a3d2806d34
+    fullPath: /Users/lsmol/Documents/Everset/Everest/Temp/UnityTempFile-23a228c2c635c42d2a1d39a3d2806d34
+    projectPath: Temp/UnityTempFile-23a228c2c635c42d2a1d39a3d2806d34
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Everest/Temp/UnityTempFile-8de5fadd699a84185b7fc084b8d751c7
+    fullPath: /Users/lsmol/Documents/Everset/Everest/Temp/UnityTempFile-8de5fadd699a84185b7fc084b8d751c7
+    projectPath: Temp/UnityTempFile-8de5fadd699a84185b7fc084b8d751c7
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Everest/Temp/UnityTempFile-d940e47d2179b4a8fb63868c5db1bf2c
+    fullPath: /Users/lsmol/Documents/Everset/Everest/Temp/UnityTempFile-d940e47d2179b4a8fb63868c5db1bf2c
+    projectPath: Temp/UnityTempFile-d940e47d2179b4a8fb63868c5db1bf2c
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Everest/Temp/UnityTempFile-e18bb4c90cf084015a3ba46a3cd18417
+    fullPath: /Users/lsmol/Documents/Everset/Everest/Temp/UnityTempFile-e18bb4c90cf084015a3ba46a3cd18417
+    projectPath: Temp/UnityTempFile-e18bb4c90cf084015a3ba46a3cd18417
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Everest/Temp/UnityTempFile-efbadb693c5194aba8140a614d027e2f
+    fullPath: /Users/lsmol/Documents/Everset/Everest/Temp/UnityTempFile-efbadb693c5194aba8140a614d027e2f
+    projectPath: Temp/UnityTempFile-efbadb693c5194aba8140a614d027e2f
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Everest/Temp/UnityTempFile-fec2d0262679b4006957b5afebbd34e5
+    fullPath: /Users/lsmol/Documents/Everset/Everest/Temp/UnityTempFile-fec2d0262679b4006957b5afebbd34e5
+    projectPath: Temp/UnityTempFile-fec2d0262679b4006957b5afebbd34e5
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1

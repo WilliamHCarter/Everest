@@ -514,6 +514,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
-  jumpVelocity: 1
+  jumpVelocity: 3
   jumpButtonPressed: 0
   rBody: {fileID: 0}

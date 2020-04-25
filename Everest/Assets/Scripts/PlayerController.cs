@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float moveSpeed = 3;
-    public float jumpVelocity = 1;
+    public float moveSpeed = 3f;
+    public float jumpVelocity = 1f;
+	public float fallMultiplier = 2.5f;
+	public float lowJumpHeight = 2f;
     public bool jumpButtonPressed;
     public Rigidbody2D rBody;
 
@@ -21,21 +23,24 @@ public class PlayerController : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
         Vector2 direction = new Vector2(x,y);
-        Walk(direction);
     }
 
     void FixedUpdate()
     {
-        if (jumpButtonPressed)
-        {
-            GetComponent<Rigidbody2D>().AddForce(Vector2.up * jumpVelocity, ForceMode2D.Impulse);
-
-            jumpButtonPressed = false;
-        }
-    }
+		Jump();
+		Walk(direction);
+	}
 
     void Walk(Vector2 direction)
     {
         rBody.velocity = new Vector2(direction.x * moveSpeed, rBody.velocity.y);
     }
+    void Jump()
+	{
+		if (jumpButtonPressed)
+		{
+			GetComponent<Rigidbody2D>().AddForce(Vector2.up * jumpVelocity, ForceMode2D.Impulse);
+			jumpButtonPressed = false;
+		}
+	}
 }

@@ -14,9 +14,15 @@ TagManager:
   - UI
   - 
   - 
+<<<<<<< HEAD
   - Player
   - Obstacle
   - Environment
+=======
+  - AbleToBeHooked
+  - 
+  - 
+>>>>>>> master
   - 
   - 
   - 

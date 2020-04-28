@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
 	public float jumpVelocity = 1f;
 	public float jumpGravity = 2f;
 	public float fallGravity = 2.5f;
+    [Range(0,1)]
 	public float wallSlideSpeed = 1f;
 	public float boxCollisionWidth = 0.05f;
 	public LayerMask mask;
@@ -63,7 +64,12 @@ public class PlayerController : MonoBehaviour
 			Jump();
 		}
 
-		if (jumpButtonPressed && wallSliding)
+		if (jumpButtonPressed && !wallSliding && onRightWall)
+		{
+			WallSlideJump();
+		}
+
+		if (jumpButtonPressed && !wallSliding && onLeftWall)
 		{
 			WallSlideJump();
 		}
@@ -106,6 +112,21 @@ public class PlayerController : MonoBehaviour
 		onGround = false;
 	}
 
+	void WallSlide()
+	{
+		rBody.velocity = new Vector2(0, 0);
+		GetComponent<Rigidbody2D>().AddForce(Vector2.down * 0.1f * wallSlideSpeed, ForceMode2D.Impulse);
+	}
+
+	void WallSlideJump()
+	{
+		Debug.Log("Jumping off walls");
+		rBody.velocity = new Vector2(0,0);
+		GetComponent<Rigidbody2D>().AddForce(Vector2.up * jumpVelocity, ForceMode2D.Impulse);
+		//rBody.velocity = Vector2.Lerp(rBody.velocity, (new Vector2(direction.x * moveSpeed, rBody.velocity.y)), .5f * Time.deltaTime);
+		jumpButtonPressed = false;
+		onGround = false;
+	}
 
 	void CollisionCheck()
 	{
@@ -120,11 +141,11 @@ public class PlayerController : MonoBehaviour
 		onRightWall = (Physics2D.OverlapBox(rightWallBoxCenter, rightWallBoxSize, 0f, mask) != null);
 
         //These manage when the player slides on walls.
-		if (onLeftWall && !onGround && (Input.GetAxis("Horizontal") < 0))
+		if (onLeftWall && !onGround && (direction.x < -0.5f))
 		{
 			wallSliding = true;
 		}
-		if (onRightWall && !onGround && (Input.GetAxis("Horizontal") > 0))
+		else if (onRightWall && !onGround && (direction.x > 0f))
 		{
 			wallSliding = true;
 		}
@@ -148,17 +169,5 @@ public class PlayerController : MonoBehaviour
 	void Respawn()
 	{
 		this.transform.position = respawnPoint;
-	}
-
-	void WallSlide()
-	{
-		rBody.velocity = new Vector2(rBody.velocity.x, -wallSlideSpeed);
-	}
-
-	void WallSlideJump()
-	{
-		GetComponent<Rigidbody2D>().AddForce(Vector2.up * jumpVelocity, ForceMode2D.Impulse);
-		jumpButtonPressed = false;
-		onGround = false;
 	}
 }

@@ -1,8 +1,7 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.ItemProperties.Unity.2D.PixelPerfect.Samples PreferredExecutionTarget="0589978e-8084-4c79-81f6-8d3766cc8c7e" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerController.cs">
     <Files>
-      <File FileName="Assets/Scripts/PlayerController.cs" Line="139" Column="3" />
+      <File FileName="Assets/Scripts/PlayerController.cs" Line="157" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
@@ -15,5 +14,4 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp-Editor-firstpass PreferredExecutionTarget="MonoDevelop.Default" />
 </Properties>

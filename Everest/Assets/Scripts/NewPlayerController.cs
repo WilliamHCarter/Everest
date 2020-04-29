@@ -33,6 +33,7 @@ public class NewPlayerController : MonoBehaviour
     bool onLeftWall;
     bool onRightWall;
     bool wallSliding;
+    bool touchingIce = false;
 
 
     void Start()
@@ -65,23 +66,17 @@ public class NewPlayerController : MonoBehaviour
             Jump();
         }
 
-        if (jumpButtonPressed && !wallSliding && onRightWall)
+        if (jumpButtonPressed && !wallSliding && (onRightWall||onLeftWall)&&!touchingIce)
         {
             WallSlideJump();
         }
-
-        if (jumpButtonPressed && !wallSliding && onLeftWall)
-        {
-            WallSlideJump();
-        }
-
 
         if (!wallSliding)
         {
             Move(direction);
         }
 
-        if (wallSliding)
+        if (wallSliding && !touchingIce)
         {
             WallSlide();
         }
@@ -89,7 +84,16 @@ public class NewPlayerController : MonoBehaviour
 
     void Move(Vector2 direction)
     {
-        rBody.velocity = new Vector2(direction.x * moveSpeed, rBody.velocity.y);
+        Vector2 vel = new Vector2(direction.x * moveSpeed, rBody.velocity.y);
+
+        //check to make sure that you are not moving into a wall
+        if (onLeftWall && direction.x < 0)
+            vel = new Vector2(0,rBody.velocity.y);
+        if (onRightWall && direction.x > 0)
+            vel = new Vector2(0, rBody.velocity.y);
+
+        rBody.velocity = vel;
+        Debug.Log(vel);
         if (rBody.velocity.y < 0)
         {
             rBody.gravityScale = fallGravity;
@@ -131,21 +135,27 @@ public class NewPlayerController : MonoBehaviour
 
     void CollisionCheck()
     {
+        touchingIce = isTouchingIce();
+
         //These update the positions of the Overlap Boxes. The player has three of these boxes that it uses to check collisions.
         Vector2 groundBoxCenter = (Vector2)transform.position + Vector2.down * (playerSize.y + groundBoxSize.y) * 0.5f;
-        onGround = (Physics2D.OverlapBox(groundBoxCenter, groundBoxSize, 0f, mask) != null);
+        Collider2D groundCollider = Physics2D.OverlapBox(groundBoxCenter, groundBoxSize, 0f, mask);
+        onGround = (groundCollider != null);
         DrawBoxCast(groundBoxCenter,groundBoxSize,transform.up*-1,mask);
 
         Vector2 leftWallBoxCenter = (Vector2)transform.position + Vector2.left * (playerSize.x + leftWallBoxSize.x) * 0.5f;
-        onLeftWall = (Physics2D.OverlapBox(leftWallBoxCenter, leftWallBoxSize, 0f, mask) != null);
+        Collider2D leftWallCollider = Physics2D.OverlapBox(leftWallBoxCenter, leftWallBoxSize, 0f, mask);
+        onLeftWall = (leftWallCollider != null);
         DrawBoxCast(leftWallBoxCenter, leftWallBoxSize, transform.right * -1, mask);
 
         Vector2 rightWallBoxCenter = (Vector2)transform.position + Vector2.right * (playerSize.x + rightWallBoxSize.x) * 0.5f;
-        onRightWall = (Physics2D.OverlapBox(rightWallBoxCenter, rightWallBoxSize, 0f, mask) != null);
+        Collider2D rightWallCollider = Physics2D.OverlapBox(rightWallBoxCenter, rightWallBoxSize, 0f, mask);
+        onRightWall = (rightWallCollider != null);
+
         DrawBoxCast(rightWallBoxCenter, rightWallBoxSize, transform.right, mask);
 
         //These manage when the player slides on walls.
-        if (onLeftWall && !onGround && (direction.x < -0.5f))
+        if ((onLeftWall && !onGround && (direction.x < -0.5f)))
         {
             wallSliding = true;
         }
@@ -158,7 +168,30 @@ public class NewPlayerController : MonoBehaviour
             wallSliding = false;
         }
 
+        if (touchingIce)
+        {
+            wallSliding = false;
+        }
+        Debug.Log(touchingIce);
+
     }
+    private bool isTouchingIce()
+    {
+        RaycastHit2D hit;
+
+        hit = Physics2D.Raycast(transform.position,Vector3.left,playerSize.x/2+0.05f);
+        Debug.DrawRay(transform.position,Vector3.left*(playerSize.x / 2 + 0.05f),Color.red );
+        if (hit.transform != null && hit.transform.gameObject.tag == "Ice")
+            return true;
+        hit = Physics2D.Raycast(transform.position, Vector3.right, playerSize.x / 2 +0.05f);
+        Debug.DrawRay(transform.position, Vector3.right * (playerSize.x / 2 +0.05f), Color.red);
+        if (hit.transform != null && hit.transform.gameObject.tag == "Ice")
+            return true;
+
+        return false;
+    }
+
+
     //For Obstacle collision, please rename to desired layers.
 
         //this functionality will be moved to a different script

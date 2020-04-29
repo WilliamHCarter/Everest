@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\SimplePlayerMovement.cs" />
     <Compile Include="Assets\Scripts\cameraFollowScript.cs" />
     <Compile Include="Assets\Scripts\grapplingHook.cs" />
+    <Compile Include="Assets\Scripts\respawner.cs" />
     <Compile Include="Assets\Scripts\ropeCharacterController.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -53,7 +53,7 @@ public class ropeCharacterController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         grounded = true;
-        Debug.Log("Collision!");
+        //Debug.Log("Collision!");
         if (!playerIsUsingHook && playerController.enabled == false)
             playerController.enabled = true;
     }

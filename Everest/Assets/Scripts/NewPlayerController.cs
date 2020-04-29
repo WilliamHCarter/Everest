@@ -93,7 +93,7 @@ public class NewPlayerController : MonoBehaviour
             vel = new Vector2(0, rBody.velocity.y);
 
         rBody.velocity = vel;
-        Debug.Log(vel);
+
         if (rBody.velocity.y < 0)
         {
             rBody.gravityScale = fallGravity;
@@ -172,7 +172,6 @@ public class NewPlayerController : MonoBehaviour
         {
             wallSliding = false;
         }
-        Debug.Log(touchingIce);
 
     }
     private bool isTouchingIce()

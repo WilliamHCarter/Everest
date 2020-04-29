@@ -8,6 +8,8 @@ TagManager:
   - Rock
   - Ice
   - RopeTarget
+  - Spikes
+  - SavePoint
   layers:
   - Default
   - TransparentFX

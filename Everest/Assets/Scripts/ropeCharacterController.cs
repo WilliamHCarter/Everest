@@ -61,7 +61,11 @@ public class ropeCharacterController : MonoBehaviour
     {
         grounded = false;
     }
-
+    public void respawn()
+    {
+        playerIsUsingHook = false;
+        grounded = false;
+    }
     
 
 }

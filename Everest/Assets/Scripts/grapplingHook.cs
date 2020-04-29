@@ -123,4 +123,10 @@ public class grapplingHook : MonoBehaviour
         ropeTargetSprite.transform.position = targetPos;
         ropeTargetSprite.GetComponent<Image>().color = col;
     }
+
+    public void respawn()
+    {
+        joint.enabled = false;
+        pivotPoint = Vector2.zero;
+    }
 }

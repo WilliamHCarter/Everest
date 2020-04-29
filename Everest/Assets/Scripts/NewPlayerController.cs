@@ -160,6 +160,9 @@ public class NewPlayerController : MonoBehaviour
 
     }
     //For Obstacle collision, please rename to desired layers.
+
+        //this functionality will be moved to a different script
+    /*
     void OnCollisionEnter2D(Collision2D collision)
     { 
         if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
@@ -174,6 +177,7 @@ public class NewPlayerController : MonoBehaviour
     {
         this.transform.position = respawnPoint;
     }
+    */
 
     //debug stuff
     public static void DrawBoxCast(Vector2 origin, Vector2 size, Vector2 direction, int mask)

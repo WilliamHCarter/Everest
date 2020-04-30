@@ -34,15 +34,33 @@ public class grapplingHook : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
-            Debug.Log("obj: "+hit.transform+" tag: "+hit.transform);
+            Vector2 playerPos = new Vector2(transform.position.x, transform.position.y);
+            Vector2 direction = (mousePos - playerPos).normalized;
+
+            RaycastHit2D hit = Physics2D.Raycast(playerPos, direction, throwDistance); //when the player clicks anywhere raycast in that direction
+            if(hit.transform != null && canBeGrappledOnTo(hit.transform.gameObject)) //if the raycast hits a game object that can be grappled on to
+            {
+                //then grab on to that object
+                pivotPoint = hit.point;
+                joint.enabled = true;
+                joint.connectedAnchor = pivotPoint;
+                joint.maxDistanceOnly = true;
+                joint.enableCollision = true;
+            }
+            else //if there is no object in range that the player can grab on to 
+            {
+                //disable distance joint
+                joint.enabled = false;
+                pivotPoint = Vector2.zero;
+            }
+
+            /*
             if(hit.transform != null && canBeGrappledOnTo(hit.transform.gameObject)) //if the player clicked on an object that can be grappled on to
             {
-                Debug.Log("Debug");
                 Vector2 playerPos = new Vector2(transform.position.x, transform.position.y);
                 Vector2 direction = (mousePos - playerPos).normalized;
-                hit = Physics2D.Raycast(playerPos, direction, throwDistance);
-                if (hit.transform != null && canBeGrappledOnTo(hit.transform.gameObject)) //if the hook hit a game object and that game object can be grappled on to
+                hit = Physics2D.Raycast(playerPos, direction, throwDistance); //raycast in the direction of the object
+                if (hit.transform != null && canBeGrappledOnTo(hit.transform.gameObject)) //if the raycast hit a game object and that game object can be grappled on to
                 {
                     pivotPoint = hit.point;
                     joint.enabled = true;
@@ -57,8 +75,16 @@ public class grapplingHook : MonoBehaviour
                 joint.enabled = false;
                 pivotPoint = Vector2.zero;
             }
-            
+            */
+
         }
+
+        if (Input.GetMouseButtonDown(1)) //if right click then disable distance joint
+        {
+            joint.enabled = false;
+            pivotPoint = Vector2.zero;
+        }
+
         if (pivotPoint != Vector2.zero)
         {
             Debug.DrawLine(transform.position, pivotPoint, Color.red);
@@ -95,10 +121,10 @@ public class grapplingHook : MonoBehaviour
         Color col = Color.red;
 
 
-        RaycastHit2D hit = Physics2D.Raycast(playerPos,direction,throwDistance);
+        RaycastHit2D hit = Physics2D.Raycast(playerPos,direction,throwDistance); //raycast towards the object that the player is pointing at
         if (hit.transform != null) 
         {
-            targetPos = hit.point;
+            targetPos = hit.point;  
             if (canBeGrappledOnTo(hit.transform.gameObject))
                 col = Color.green;
         }

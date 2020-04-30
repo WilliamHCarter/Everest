@@ -66,7 +66,7 @@ public class NewPlayerController : MonoBehaviour
             Jump();
         }
 
-        if (jumpButtonPressed && !wallSliding && (onRightWall||onLeftWall)&&!touchingIce)
+        if (jumpButtonPressed && !wallSliding && (onRightWall || onLeftWall) && !touchingIce)
         {
             WallSlideJump();
         }
@@ -88,7 +88,7 @@ public class NewPlayerController : MonoBehaviour
 
         //check to make sure that you are not moving into a wall
         if (onLeftWall && direction.x < 0)
-            vel = new Vector2(0,rBody.velocity.y);
+            vel = new Vector2(0, rBody.velocity.y);
         if (onRightWall && direction.x > 0)
             vel = new Vector2(0, rBody.velocity.y);
 
@@ -141,7 +141,7 @@ public class NewPlayerController : MonoBehaviour
         Vector2 groundBoxCenter = (Vector2)transform.position + Vector2.down * (playerSize.y + groundBoxSize.y) * 0.5f;
         Collider2D groundCollider = Physics2D.OverlapBox(groundBoxCenter, groundBoxSize, 0f, mask);
         onGround = (groundCollider != null);
-        DrawBoxCast(groundBoxCenter,groundBoxSize,transform.up*-1,mask);
+        DrawBoxCast(groundBoxCenter, groundBoxSize, transform.up * -1, mask);
 
         Vector2 leftWallBoxCenter = (Vector2)transform.position + Vector2.left * (playerSize.x + leftWallBoxSize.x) * 0.5f;
         Collider2D leftWallCollider = Physics2D.OverlapBox(leftWallBoxCenter, leftWallBoxSize, 0f, mask);
@@ -178,12 +178,12 @@ public class NewPlayerController : MonoBehaviour
     {
         RaycastHit2D hit;
 
-        hit = Physics2D.Raycast(transform.position,Vector3.left,playerSize.x/2+0.05f);
-        Debug.DrawRay(transform.position,Vector3.left*(playerSize.x / 2 + 0.05f),Color.red );
+        hit = Physics2D.Raycast(transform.position, Vector3.left, playerSize.x / 2 + 0.05f);
+        Debug.DrawRay(transform.position, Vector3.left * (playerSize.x / 2 + 0.05f), Color.red);
         if (hit.transform != null && hit.transform.gameObject.tag == "Ice")
             return true;
-        hit = Physics2D.Raycast(transform.position, Vector3.right, playerSize.x / 2 +0.05f);
-        Debug.DrawRay(transform.position, Vector3.right * (playerSize.x / 2 +0.05f), Color.red);
+        hit = Physics2D.Raycast(transform.position, Vector3.right, playerSize.x / 2 + 0.05f);
+        Debug.DrawRay(transform.position, Vector3.right * (playerSize.x / 2 + 0.05f), Color.red);
         if (hit.transform != null && hit.transform.gameObject.tag == "Ice")
             return true;
 
@@ -193,7 +193,7 @@ public class NewPlayerController : MonoBehaviour
 
     //For Obstacle collision, please rename to desired layers.
 
-        //this functionality will be moved to a different script
+    //this functionality will be moved to a different script
     /*
     void OnCollisionEnter2D(Collision2D collision)
     { 

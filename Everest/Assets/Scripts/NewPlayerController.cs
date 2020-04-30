@@ -103,7 +103,7 @@ public class NewPlayerController : MonoBehaviour
         }
         else
         {
-            rBody.gravityScale = 1.7f;
+            rBody.gravityScale = jumpGravity;
         }
         
         /*

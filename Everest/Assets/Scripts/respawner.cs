@@ -9,7 +9,7 @@ public class respawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        respawnPoint = new Vector2(-30,-10); //starting spawn point
+        respawnPoint = GameObject.FindGameObjectWithTag("Player").transform.position;
     }
 
     // Update is called once per frame

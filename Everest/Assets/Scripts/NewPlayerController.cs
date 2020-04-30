@@ -12,7 +12,6 @@ public class NewPlayerController : MonoBehaviour
     public float jumpVelocity = 1f;
     public float jumpGravity = 2f;
     public float fallGravity = 2.5f;
-    [Range(0, 1)]
     public float wallSlideSpeed = 1f;
     public float boxCollisionWidth = 0.05f;
     public LayerMask mask;
@@ -40,7 +39,7 @@ public class NewPlayerController : MonoBehaviour
     {
         rBody = GetComponent<Rigidbody2D>();
         rBody.freezeRotation = true;
-        Time.fixedDeltaTime = 1f / 120f;
+        //Time.fixedDeltaTime = 1f / 120f;
         //playerSize = GetComponent<BoxCollider2D>().size;
         groundBoxSize = new Vector2(playerSize.x - 0.05f, boxCollisionWidth);
         leftWallBoxSize = new Vector2(boxCollisionWidth, playerSize.y - 0.05f);
@@ -50,11 +49,13 @@ public class NewPlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        jumpButtonPressed |= Input.GetButtonDown("Jump");
+        //jumpButtonPressed |= Input.GetButtonDown("Jump"); //what does this do?
+        jumpButtonPressed = Input.GetButtonDown("Jump");
+        test();
     }
 
     //FixedUpdate is called twice per frame, set at Start.
-    void FixedUpdate()
+    void test()
     {
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
@@ -66,8 +67,9 @@ public class NewPlayerController : MonoBehaviour
             Jump();
         }
 
-        if (jumpButtonPressed && !wallSliding && (onRightWall || onLeftWall) && !touchingIce)
+        if (jumpButtonPressed && !wallSliding && (onRightWall || onLeftWall))
         {
+            Debug.Log("is this happening?");
             WallSlideJump();
         }
 
@@ -94,24 +96,33 @@ public class NewPlayerController : MonoBehaviour
 
         rBody.velocity = vel;
 
+        
         if (rBody.velocity.y < 0)
         {
             rBody.gravityScale = fallGravity;
         }
-
+        else
+        {
+            rBody.gravityScale = 1.7f;
+        }
+        
+        /*
         else if (rBody.velocity.y > 0 && !Input.GetButton("Jump"))
         {
             rBody.gravityScale = jumpGravity;
         }
+        
 
         else
         {
             rBody.gravityScale = 1f;
         }
+        */
     }
 
     void Jump()
     {
+        Debug.Log("call");
         GetComponent<Rigidbody2D>().AddForce(Vector2.up * jumpVelocity, ForceMode2D.Impulse);
         jumpButtonPressed = false;
         onGround = false;

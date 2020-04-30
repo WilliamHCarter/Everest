@@ -10,6 +10,7 @@ TagManager:
   - RopeTarget
   - Spikes
   - SavePoint
+  - GameOverUI
   layers:
   - Default
   - TransparentFX
